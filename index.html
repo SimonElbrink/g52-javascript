@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--
+    <script src="index.js"></script>
+     -->
+  </head>
+  <body>
+    <div id="main">Js in HTML</div>
+
+    <div id="container">
+
+        <button type="button" onClick="login()">Login</button>
+    </div>
+
+
+    <script>
+      console.log("JavaScript");
+
+      const mainElement = document.getElementById("main");
+      mainElement.innerHTML = "<b> I Love JS </b>";
+
+      const pElement = document.createElement("p");
+      pElement.innerHTML = "This is a paragraph!";
+      // <p>This is a paragraph!</p>
+
+      mainElement.appendChild(pElement);
+
+      
+      function login(){
+        console.log("Login function has been executed!");
+        alert("Login operation is done!");
+        //Go to Backend Auth
+      }
+
+
+
+
+    </script>
+  </body>
+</html>
