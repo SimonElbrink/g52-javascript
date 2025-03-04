@@ -70,3 +70,30 @@ const hideTable = () => {
         table.remove();
     }
 };
+
+const validateAndSubmit = () => {
+
+    const firstname = document.getElementById("firstName").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+
+    if(!firstname){
+        document.getElementById("firstName").classList.add("is-invalid")
+    }else{
+        document.getElementById("firstName").classList.remove("is-invalid")
+    }
+
+    if(!isValidEmail(email)){
+        document.getElementById("email").classList.add("is-invalid")
+    }else{
+        document.getElementById("email").classList.remove("is-invalid")
+    }
+
+    //send data somewhere?
+};
+
+const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+};
+
